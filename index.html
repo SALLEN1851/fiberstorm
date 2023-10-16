@@ -10,14 +10,12 @@
 </head>
 <body>
 
-<div id="search-box">
-    <form name="fibersearch" method="POST" data-netlify="true">
-        <label for="address">Address:</label>
-        <input type="text" id="address-search" name="address" placeholder="Enter address"/>
-        <button type="submit" value="Submit" onclick="searchAddress()">Search</button>
-        </form>
-    </div>
-    <div id="map"></div>
+
+    <div id="search-box">
+            <input type="text" id="address-search" placeholder="Enter address"/>
+            <button onclick="searchAddress()">Search</button>
+        </div>
+        <div id="map"></div>
 
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js"></script>
     <script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
