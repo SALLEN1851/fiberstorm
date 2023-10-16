@@ -1,6 +1,9 @@
 require('dotenv').config();
 
-mapboxgl.accessToken = `${mapbox}`;
+const mapbox = encodeURIComponent(process.env.MAPBOX_API);
+const mapbox_access = encodeURIComponent(process.env.mapbox_access);
+
+mapboxgl.accessToken = "pk.eyJ1Ijoic2FsbGVuMTA2IiwiYSI6ImNsbXRreXByNTA1bnEya282NmN0bWZ6YnYifQ.Sp37eOWkksk23vrlWzu6JQ";
 
 const map = new mapboxgl.Map({
     container: 'map',
@@ -101,7 +104,7 @@ map.addLayer({
 function searchAddress() {
 		console.log('Search function triggered'); 
     const address = document.getElementById('address-search').value;
-    const accessToken = `${mapbox_access}`
+    const accessToken = "pk.eyJ1Ijoic2FsbGVuMTA2IiwiYSI6ImNsbXRreXByNTA1bnEya282NmN0bWZ6YnYifQ.Sp37eOWkksk23vrlWzu6JQ"
 
 
 
