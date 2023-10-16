@@ -99,7 +99,7 @@ map.addLayer({
 function searchAddress() {
 		console.log('Search function triggered'); 
     const address = document.getElementById('address-search').value;
-    const accessToken = 'pk.eyJ1Ijoic2FsbGVuMTA2IiwiYSI6ImNsbXRreXByNTA1bnEya282NmN0bWZ6YnYifQ.Sp37eOWkksk23vrlWzu6JQ';
+    const accessToken = 'sk.eyJ1Ijoic2FsbGVuMTA2IiwiYSI6ImNsbnRhMzB6dTAxbGUya21majU0bGZndXgifQ.7zYszJiUMf-J8LeKR0ma7w';
 
 
     fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(address)}.json?access_token=${accessToken}`)
