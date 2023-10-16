@@ -1,9 +1,4 @@
-require('dotenv').config();
-
-const mapbox = encodeURIComponent(process.env.MAPBOX_API);
-const mapbox_access = encodeURIComponent(process.env.mapbox_access);
-
-mapboxgl.accessToken = "pk.eyJ1Ijoic2FsbGVuMTA2IiwiYSI6ImNsbXRreXByNTA1bnEya282NmN0bWZ6YnYifQ.Sp37eOWkksk23vrlWzu6JQ";
+mapboxgl.accessToken = 'pk.eyJ1Ijoic2FsbGVuMTA2IiwiYSI6ImNsbXRreXByNTA1bnEya282NmN0bWZ6YnYifQ.Sp37eOWkksk23vrlWzu6JQ';
 
 const map = new mapboxgl.Map({
     container: 'map',
@@ -104,8 +99,7 @@ map.addLayer({
 function searchAddress() {
 		console.log('Search function triggered'); 
     const address = document.getElementById('address-search').value;
-    const accessToken = "pk.eyJ1Ijoic2FsbGVuMTA2IiwiYSI6ImNsbXRreXByNTA1bnEya282NmN0bWZ6YnYifQ.Sp37eOWkksk23vrlWzu6JQ"
-
+    const accessToken = 'pk.eyJ1Ijoic2FsbGVuMTA2IiwiYSI6ImNsbXRreXByNTA1bnEya282NmN0bWZ6YnYifQ.Sp37eOWkksk23vrlWzu6JQ';
 
 
     fetch(`https://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(address)}.json?access_token=${accessToken}`)
